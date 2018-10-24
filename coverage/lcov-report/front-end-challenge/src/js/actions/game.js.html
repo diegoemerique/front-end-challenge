@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for front-end-challenge/src/js/actions/game.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">front-end-challenge/src/js/actions</a> game.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">2.27% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>1/44</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/18</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">2.27% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>1/44</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { shuffleCardsPositions, waitAnimation, fireEvent } from '../helpers/utils';
+import { changeTipState } from './tip';
+import { selectCard, openModal, closeModal } from './modal'
+import {
+    CHANGE_CARDS,
+    FLIP_CARD,
+    FLIP_ALL_CARDS,
+    TOGGLE_DISABLE,
+    INIT_GAME,
+    CHANGE_GAME_START,
+    CHANGE_GRID_COL,
+    CHANGE_ANIMATION_MODE
+} from './actionsTypes';
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >shuffleCards(</span>cards) {
+    let newCards = <span class="cstat-no" title="statement not covered" >[ ...cards ];</span>
+&nbsp;
+    const shuffledcards = <span class="cstat-no" title="statement not covered" >shuffleCardsPositions(newCards);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return {</span>
+        type: CHANGE_CARDS,
+        cards: shuffledcards
+    }
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >flipCard(</span>cardId) {
+<span class="cstat-no" title="statement not covered" >    return {</span>
+        type: FLIP_CARD,
+        cardId
+    }
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >flipCardThenOpenModal(</span>cardId) {
+<span class="cstat-no" title="statement not covered" >    return <span class="fstat-no" title="function not covered" >(d</span>ispatch, getState) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        if (!getState().data.cards[cardId].flipped) {</span>
+<span class="cstat-no" title="statement not covered" >            return false;</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        dispatch(toggleDisable(true));</span>
+<span class="cstat-no" title="statement not covered" >        dispatch(flipCard(cardId));</span>
+<span class="cstat-no" title="statement not covered" >        dispatch(selectCard(cardId));</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return waitAnimation().then(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >            dispatch(openModal());</span>
+<span class="cstat-no" title="statement not covered" >            dispatch(toggleDisable(false));</span>
+        });
+    }
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >flipAllCards(</span>side) {
+    let isFlipped = <span class="cstat-no" title="statement not covered" >side === 'back' ? true : false;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return {</span>
+        type: FLIP_ALL_CARDS,
+        isFlipped
+    }
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >changeAnimationMode(</span>mode) {
+<span class="cstat-no" title="statement not covered" >    return {</span>
+        type: CHANGE_ANIMATION_MODE,
+        mode
+    };
+}
+&nbsp;
+export const changeGridCols = <span class="fstat-no" title="function not covered" >(t</span>otalCols) =&gt; {
+<span class="cstat-no" title="statement not covered" >    return {</span>
+        type: CHANGE_GRID_COL,
+        gridCols: totalCols
+    };
+};
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >changeGameStarted(</span>gameStarted) {
+<span class="cstat-no" title="statement not covered" >    return {</span>
+        type: CHANGE_GAME_START,
+        gameStarted
+    };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >toggleDisable(</span>isDisable) {
+<span class="cstat-no" title="statement not covered" >    return {</span>
+        type: TOGGLE_DISABLE,
+        isDisable
+    };
+}
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >initGame(</span>) {
+<span class="cstat-no" title="statement not covered" >    return <span class="fstat-no" title="function not covered" >(d</span>ispatch, getState) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        dispatch(changeGameStarted(true));</span>
+<span class="cstat-no" title="statement not covered" >        dispatch(toggleDisable(true));</span>
+<span class="cstat-no" title="statement not covered" >        dispatch(changeAnimationMode('flippling'));</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        dispatch(flipAllCards('back'));</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        dispatch(changeTipState('hide'));</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return waitAnimation()</span>
+                .then(<span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >                    dispatch(changeAnimationMode('joining'));</span>
+<span class="cstat-no" title="statement not covered" >                    return waitAnimation();</span>
+                })
+                .then(<span class="fstat-no" title="function not covered" >()</span> =&gt; {
+                    let cards = <span class="cstat-no" title="statement not covered" >getState().data.cards;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                    dispatch(shuffleCards(cards));</span>
+<span class="cstat-no" title="statement not covered" >                    dispatch(changeAnimationMode('backPosition'));</span>
+<span class="cstat-no" title="statement not covered" >                    return waitAnimation();</span>
+                })
+                .then(<span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >                    dispatch(changeAnimationMode(''));</span>
+<span class="cstat-no" title="statement not covered" >                    dispatch(toggleDisable(false));</span>
+&nbsp;
+                    // to make sure card positions has recalculate
+<span class="cstat-no" title="statement not covered" >                    fireEvent('resize');</span>
+                });
+    };
+};
+&nbsp;
+export function <span class="fstat-no" title="function not covered" >restartGame(</span>) {
+<span class="cstat-no" title="statement not covered" >    return <span class="fstat-no" title="function not covered" >(d</span>ispatch, getState) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        dispatch(toggleDisable(true));</span>
+<span class="cstat-no" title="statement not covered" >        dispatch(changeGameStarted(false));</span>
+<span class="cstat-no" title="statement not covered" >        dispatch(flipAllCards('face', getState));</span>
+<span class="cstat-no" title="statement not covered" >        dispatch(closeModal());</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return waitAnimation()</span>
+                .then(<span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >                    dispatch(toggleDisable(false));</span>
+&nbsp;
+                    // to make sure card positions has recalculate
+<span class="cstat-no" title="statement not covered" >                    fireEvent('resize');</span>
+                });
+    };
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Jun 06 2018 20:42:09 GMT-0300 (-03)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

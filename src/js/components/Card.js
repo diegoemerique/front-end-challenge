@@ -25,7 +25,7 @@ class Card extends Component {
 
     joinCard(card) {
         let middleX = (card.parentNode.offsetWidth / 2) - (card.offsetWidth / 2);
-        let middleViewHeight = (window.innerHeight / 2) - (card.offsetHeight / 2);
+        let middleViewHeight = (window.innerHeight / 2) - (card.offsetHeight / 2) + window.scrollY;
 
         card.style.webkitTransform = `translate(${middleX}px, ${middleViewHeight}px)`;
         card.style.transform = `translate(${middleX}px, ${middleViewHeight}px)`;

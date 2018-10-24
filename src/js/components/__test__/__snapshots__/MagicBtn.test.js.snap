@@ -51,10 +51,7 @@ exports[`MagicBtn should render correctly width 1`] = `
       >
         <feColorMatrix
           type="matrix"
-          values="0.91 0 0 0   0
- 0 0.44 0 0   0
- 0 0 1 0   0
- 0 0 0 1 0"
+          values="0.91 0 0 0   0 0 0.44 0 0   0 0 0 1 0   0 0 0 0 1 0"
         />
         <feGaussianBlur
           result="coloredBlur"
